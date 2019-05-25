@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CCPS 530 - Lab 3 - Part 1</title>
+	<link rel="stylesheet" href="style_lab3_part1.css"/>
+</head>
+<body>
+	<form action="processForm.php" method="POST">
+		<div class="inputRow">
+			<label class="myLabel" for="animal1">Animal One</label>
+			<input class="myInput" type="text" name="animal1" placeholder="First animal">
+		</div>
+
+		<div class="inputRow">
+			<label class="myLabel" for="animal2">Animal Two</label>
+			<input class="myInput" type="text" name="animal2" placeholder="Second animal">
+		</div>
+
+		<div class="inputRow">
+			<label class="myLabel" for="hitPoints">Hit Points</label>
+			<input class="myInput" type="number" min="1" max="99" name="hitPoints"/>
+		</div>
+
+		<div class="inputRow">
+			<label class="myLabel" for="hitPoints">Dexterity</label>
+			<input class="myInput" type="number" min="1" max="15" name="dexterity"/>
+		</div>
+
+		<div class="inputRow">
+			<label class="myLabel" for="colour">Colour</label>
+			<input class="myInput" type="color" name="colour"/>
+		</div>
+
+		<input id="go" name="go" type="submit" class="myInput" value="Create!">
+	</form>
+
+</body>
+</html>
