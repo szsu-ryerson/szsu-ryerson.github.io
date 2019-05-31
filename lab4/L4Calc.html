@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CCPS 530 - Lab 4 - Calculator</title>
+	<script type="text/javascript" src="L4.js"></script>
+	<style>
+		#main{
+			margin:auto;
+			width:600px;
+			height: 400px;
+			border-style: solid;
+			border-color: black;
+			padding: 10px;
+		}
+
+		#userInput{
+			display: flex;
+			justify-content: space-around;
+			margin-bottom: 100px;
+		}
+		input,button,select{
+			display: block;
+			margin-bottom: 20px;
+			height:50px;
+			width: 150px;
+			font-size: 20px;
+			text-align: center;
+		}
+
+		#result{
+			border:none;
+			background-color: lightgreen;
+		}
+
+		#reset{
+			background-color: red;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="main">
+		<div id="userInput">
+			<div>
+				<input type="text" id="input">
+
+				<button onclick="submit()" id="submit">Submit</button>
+
+				<select id="operators" onchange="addOperator()" disabled>
+			    	<option value="Null">Operators</option>
+				  	<option value="*">*</option>
+			    	<option value="/">/</option>
+				</select>
+			</div>
+
+			<div>
+				<button onclick="calculate()" id="calculate" disabled>Calculate</button>
+				<input type="text" id="result" placeholder="Result" readonly>
+				<button onclick="reset()" id="reset">Reset</button>
+			</div>
+		</div>
+
+
+	<P>Formula: </p>
+	<p id="formula"></p>
+	<p id="error" style="color:red;"></p>
+	
+	</div>
+</body>
+</html>
+
